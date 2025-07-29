@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047108984590",
+    "project_id": "companion-npos",
+    "storage_bucket": "companion-npos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047108984590:android:f4af6a3750e4124485c15f",
+        "android_client_info": {
+          "package_name": "com.example.webview_in_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVyes6qJi_GyIVF4o6gK_NnrpHAjbAbZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
