@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:webview_in_flutter/pages/barcode_scanner_page.dart';
@@ -19,12 +20,24 @@ class _WebViewPageState extends State<WebViewPage> {
 
   @override
   Widget build(BuildContext context) {
+    // Configuration de la barre de statut
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Color.fromARGB(255, 30, 32, 78),
+      statusBarBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.light,
+    ));
+
     return Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 10.0,
-        backgroundColor: const Color.fromARGB(255, 30, 32, 78),
-      ),
-      body: InAppWebView(
+      body: Column(
+        children: [
+          // Container pour remplacer l'AppBar et éliminer la barre blanche
+          Container(
+            height: MediaQuery.of(context).padding.top,
+            color: const Color.fromARGB(255, 30, 32, 78),
+          ),
+          // WebView qui prend tout l'espace restant
+          Expanded(
+            child: InAppWebView(
         initialUrlRequest: URLRequest(
           url: WebUri(
             /* "http://192.168.0.243:8000/lapage.html" */ "http://192.168.0.139:5173/",
@@ -108,9 +121,12 @@ class _WebViewPageState extends State<WebViewPage> {
 
             // Désactive le menu contextuel (clic droit ou appui long)
             document.addEventListener('contextmenu', event => event.preventDefault());
-          ''',
-          );
-        },
+              ''',
+              );
+            },
+            ),
+          ),
+        ],
       ),
     );
   }
