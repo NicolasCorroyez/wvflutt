@@ -1,11 +1,11 @@
 {
-  "name": "webview_in_flutter",
-  "short_name": "webview_in_flutter",
+  "name": "Galiapp",
+  "short_name": "Galiapp",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0175C2",
   "theme_color": "#0175C2",
-  "description": "A new Flutter project.",
+  "description": "Galiapp - Application WebView Flutter.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [

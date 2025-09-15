@@ -1,6 +1,6 @@
-# webview_in_flutter
+# Galiapp
 
-A new Flutter project.
+Galiapp - Application WebView Flutter.
 
 ## Getting Started
 

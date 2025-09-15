@@ -1,13 +1,12 @@
 plugins {
     id("com.android.application")
-    id("com.google.gms.google-services") // FlutterFire
     id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
     namespace = "com.example.webview_in_flutter"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 34  // Mise à jour pour correspondre au targetSdk
     ndkVersion = "27.0.12077973"
 
     compileOptions {
@@ -22,8 +21,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.webview_in_flutter"
-        minSdk = 21
-        targetSdk = 30
+        minSdk = flutter.minSdkVersion  // Android 6.0+ pour de meilleures performances
+        targetSdk = 34  // Android 14 (dernière version stable)
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
